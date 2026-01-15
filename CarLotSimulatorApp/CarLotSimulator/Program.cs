@@ -62,7 +62,7 @@ namespace CarLotSimulator
             // {
             //     Console.WriteLine($"Created cars: {carLotOne.ParkingLot.Count}");
             // }
-            
+            Console.WriteLine($"Total cars created:{CarLot.numberOfCars}");
             carLotOne.CheckCars();
 
 

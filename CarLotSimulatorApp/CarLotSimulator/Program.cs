@@ -25,9 +25,12 @@ namespace CarLotSimulator
             carOne.Year = 1972;
             carOne.IsDriveable = true;
             
+            carLotOne.ParkingLot.Add(carOne);
+            Console.WriteLine($"Created car:{carLotOne.ParkingLot.Count}");
             carOne.MakeEngineNoise("Vrooom");
             carOne.MakeHonkNoise("Beep");
-
+            
+            
             
 
             var carTwo = new Car()
@@ -38,19 +41,27 @@ namespace CarLotSimulator
                 IsDriveable = true,
             };
             
+            carLotOne.ParkingLot.Add(carTwo);
+            Console.WriteLine($"Created car:{carLotOne.ParkingLot.Count}");
             carTwo.MakeEngineNoise("Vrooom Vrooom");
             carTwo.MakeHonkNoise("Beep Beep");
             
             
 
             var carThree = new Car("Nissan", "Altima", 1982, true);
+            
+            carLotOne.ParkingLot.Add(carThree);
+            Console.WriteLine($"Created car:{carLotOne.ParkingLot.Count}");
             carThree.MakeEngineNoise("Vrooom Vrooom Vroooom");
             carThree.MakeHonkNoise("Beeep Beeep Beeep");
             
-            
-            carLotOne.ParkingLot.Add(carOne);
-            carLotOne.ParkingLot.Add(carTwo);
-            carLotOne.ParkingLot.Add(carThree);
+
+            // Console.WriteLine($"Created cars: {CarLot.numberOfCars}");
+            // Console.WriteLine($"Created cars: {carLotOne.ParkingLot.Count}");
+            // foreach (var car in carLotOne.ParkingLot)
+            // {
+            //     Console.WriteLine($"Created cars: {carLotOne.ParkingLot.Count}");
+            // }
             
             carLotOne.CheckCars();
 
